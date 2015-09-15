@@ -1,10 +1,10 @@
 var Pact = require('pact-consumer-js-dsl');
 var http = require('http');
-var ready = false, amount = 0, port = 9700;
+var ready = false, amount = 0, port = 9000;
 var service = Pact.mockService({
-	consumer: 'webapp-scout',
+	consumer: 'todo',
 	port: port,
-	provider: 'forms-api',
+	provider: 'todo-api',
 	done: function () {}
 });
 

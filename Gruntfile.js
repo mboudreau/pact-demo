@@ -204,14 +204,14 @@ module.exports = function (grunt) {
 				args: {
 					verbose: true,
 					specs: '<%= app_files.jse2e %>',
-					baseUrl: '<%= connect.options.protocol %>://localhost:<%= connect.test.options.port %>/<%= pkg.name %>/'
+					baseUrl: '<%= connect.options.protocol %>://localhost:<%= connect.options.port %>/<%= pkg.name %>/'
 				}
 			},
 			all: {}
 		},
 
 		pact: {
-			deo: {
+			demo: {
 				options: {
 					port: 9700,
 					cors: true,
@@ -418,7 +418,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('test', ['test:unit', 'test:e2e']);
 	grunt.registerTask('test:unit', ['karmaconfig', 'karma:unit']);
-	grunt.registerTask('test:e2e', ['connect:build', 'pact:start', 'protractor', 'pact:stop']);
+	grunt.registerTask('test:e2e', ['connect:build', /*'pact:start', */'protractor', /*'pact:stop'*/]);
 
 	/**
 	 * Pact tasks

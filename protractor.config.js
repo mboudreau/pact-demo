@@ -17,15 +17,14 @@ exports.config = {
 		showColors: true,
 		includeStackTrace: true,
 		print: function() {} // Remove dot reporter
-	}/*,
+	},
 
 	onPrepare: function() {
 		// Sets browser cookies for tests
 		browser.get('/');
-		browser.executeScript('document.cookie=\'locksmith_access_token={"ProtectedTicket":"locksmith_user_id=user_34567|locksmith_instance_id=34567","RefreshToken":"blah"}\';');
 
 		// add jasmine spec reporter
 		var SpecReporter = require('jasmine-spec-reporter');
 		jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
-	}*/
+	}
 };
