@@ -213,7 +213,7 @@ module.exports = function (grunt) {
 		pact: {
 			demo: {
 				options: {
-					port: 9700,
+					port: 9000,
 					cors: true,
 					dir: '.tmp/pacts'
 				}
